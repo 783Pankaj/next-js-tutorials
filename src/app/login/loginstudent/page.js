@@ -1,19 +1,18 @@
 'use client'
-import { useRouter } from "next/navigation";
+import { useRouter } from 'next/navigation'
 
-const LoginStudent=()=>{
-    const router = useRouter();
+const LoginStudent = () => {
+    const router = useRouter()
 
-    const BackLogin=(back)=>{
-        router.push(back)
+    const BackLogin=(pages)=>{
+        router.push(pages)
     }
-    return(
+    return (
         <div>
-            <h1>Student Login Page</h1>
-            <br/>
-            <button onClick={()=>BackLogin('/login')}>Back to Login</button><br/>
-            <button onClick={()=>BackLogin('/')}>Back Home</button>
+            <h1 className="heading">Student Login Page</h1>
+            <button onClick={()=>BackLogin('/login')}>Back to Main Login</button>
         </div>
-    );
+    )
 }
+
 export default LoginStudent;
